@@ -1,0 +1,11 @@
+---
+- name: Provisioning servers
+  hosts: all
+  become: yes
+  roles:
+    - role: post-install
+      vars:
+        ntp0: 0.south-america.pool.ntp.org
+        ntp1: 1.south-america.pool.ntp.org
+        ntp2: 2.south-america.pool.ntp.org
+        ntp3: 3.south-america.pool.ntp.org
